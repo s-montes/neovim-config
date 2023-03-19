@@ -25,5 +25,6 @@ return {
   },
   {
     "renerocksai/calendar-vim",
+    dependencies = { "renerocksai/telekasten.nvim" },
   },
 }

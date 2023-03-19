@@ -14,6 +14,7 @@ return {
   },
   {
     "kylechui/nvim-surround",
+    lazy = false,
     version = "*",
     config = function() require("nvim-surround").setup {} end,
   },
@@ -37,13 +38,18 @@ return {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    ft = { "python", "markdown", "telekasten" },
     config = function()
       require("todo-comments").setup {
-        -- keywords = {
-        --         H_T = { color = "warning" },
-        --         M_T = { color = "hint" },
-        --         L_T = { color = "test" },
-        -- }
+        keywords = {
+          H_T = { color = "#DC2626" },
+          M_T = { color = "#FBBF24" },
+          L_T = { color = "#7C3AED" },
+        },
+        highlight = {
+          pattern = [[.*:?<(KEYWORDS)\s*:]],
+          comments_only = false,
+        },
       }
     end,
   },
