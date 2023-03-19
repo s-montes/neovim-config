@@ -18,12 +18,7 @@ return {
       desc = "Previous buffer",
     },
     ["<leader>y"] = { '"+y', desc = "Yank to clipboard" },
-    ["<leader>p"] = { '"+p', desc = "Paste from clipboard" },
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
-    ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    -- quick save
-    ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+    ["<leader>P"] = { '"+p', desc = "Paste from clipboard" },
     ["<C-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle term" },
     -- ipython
     ["<leader>tp"] = {
