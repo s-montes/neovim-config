@@ -27,7 +27,7 @@ return {
     ["<C-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle term" },
     -- ipython
     ["<leader>tp"] = {
-      function() astronvim.toggle_term_cmd "ipython" end,
+      function() require("astronvim.utils").toggle_term_cmd "ipython" end,
       desc = "ToggleTerm ipython",
     },
     -- Testing
