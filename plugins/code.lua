@@ -1,5 +1,29 @@
 return {
   {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = { "python", "yaml", "toml", "markdown", "json", "lua" },
+    },
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "ruff_lsp", "pylsp", "lua_ls" },
+    },
+  },
+  {
+    "jay-babu/mason-null-ls.nvim",
+    opts = {
+      ensure_installed = { "stylua", "markdownlint" },
+    },
+  },
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    opts = {
+      ensure_installed = { "python" },
+    },
+  },
+  {
     "nvim-neotest/neotest",
     dependencies = { "nvim-neotest/neotest-python" },
     config = function()
