@@ -1,3 +1,4 @@
+-- See https://github.com/charliermarsh/ruff-lsp
 return {
   settings = {
     args = {

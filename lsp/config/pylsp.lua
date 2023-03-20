@@ -1,3 +1,4 @@
+-- See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
 return {
   settings = {
     pylsp = {
@@ -25,8 +26,6 @@ return {
         },
         ruff = {
           enabled = false,
-          select = { "E", "F", "C", "ARG", "PD" },
-          ignore = { "E501" },
         },
         pycodestyle = {
           enabled = false,
