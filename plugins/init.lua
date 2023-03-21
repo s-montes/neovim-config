@@ -1,7 +1,11 @@
 return {
   {
+    "renerocksai/calendar-vim",
+  },
+  {
     "renerocksai/telekasten.nvim",
     cmd = "Telekasten",
+    dependencies = { "renerocksai/calendar-vim" },
     keys = {
       ["<leader>zz"] = { "<cmd>Telekasten panel<cr>", desc = ":tk Toggle panel" },
       ["<leader>zf"] = { "<cmd>Telekasten find_notes<cr>", desc = ":tk Find notes" },
@@ -22,9 +26,5 @@ return {
         template_new_note = notes_workspace .. "templates/new_note.md",
       }
     end,
-  },
-  {
-    "renerocksai/calendar-vim",
-    dependencies = { "renerocksai/telekasten.nvim" },
   },
 }
