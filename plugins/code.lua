@@ -73,7 +73,7 @@ return {
         keywords = {
           HIGH_P = { color = "#FF3264" },
           MID_P = { color = "#FBBF24" },
-          LOW_T = { color = "#00BEDE" },
+          LOW_P = { color = "#00BEDE" },
         },
         highlight = {
           pattern = [[.*:?<(KEYWORDS)\s*:]],
