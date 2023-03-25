@@ -8,7 +8,12 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "ruff_lsp", "pylsp", "lua_ls" },
+      ensure_installed = {
+        "ruff_lsp",
+        -- "pylsp",
+        "pyright",
+        "lua_ls",
+      },
     },
   },
   {
@@ -66,9 +71,9 @@ return {
     config = function()
       require("todo-comments").setup {
         keywords = {
-          H_T = { color = "#DC2626" },
-          M_T = { color = "#FBBF24" },
-          L_T = { color = "#7C3AED" },
+          HIGH_P = { color = "#FF3264" },
+          MID_P = { color = "#FBBF24" },
+          LOW_T = { color = "#00BEDE" },
         },
         highlight = {
           pattern = [[.*:?<(KEYWORDS)\s*:]],

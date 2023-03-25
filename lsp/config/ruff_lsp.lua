@@ -1,9 +1,23 @@
 -- See https://github.com/charliermarsh/ruff-lsp
 return {
-  settings = {
-    args = {
-      select = { "E", "F", "C", "I", "ARG", "PD" },
-      ignore = { "E501" },
+  init_options = {
+    settings = {
+      args = {
+        "--select",
+        "E",
+        "--select",
+        "F",
+        "--select",
+        "C",
+        "--select",
+        "I",
+        "--select",
+        "ARG",
+        "--select",
+        "PD",
+        "--ignore",
+        "E501",
+      },
     },
   },
 }
