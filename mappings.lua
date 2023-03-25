@@ -1,11 +1,3 @@
-local fix_style_tk = function()
-  vim.api.nvim_set_hl(0, "tkTag", { bold = true, fg = "yellow", ctermbg = 0, bg = "black" })
-  vim.api.nvim_set_hl(0, "tkHighlight", { bold = true, fg = "IndianRed", ctermbg = 0, bg = "black" })
-  vim.api.nvim_set_hl(0, "tkLink", { underline = true, bold = true, fg = "SandyBrown" })
-  vim.api.nvim_set_hl(0, "tkLinkAlias", { underline = true, bold = true, fg = "SandyBrown" })
-  vim.api.nvim_set_hl(0, "tkHighlightedAliasedLink", { underline = true, bold = true, fg = "MediumSlateBlue" })
-end
-
 return {
   -- first key is the mode
   n = {
@@ -49,7 +41,6 @@ return {
     ["<leader>z["] = { "<cmd>Telekasten toggle_todo<cr>", desc = ":tk Toggle TODO" },
     ["<leader>z<cr>"] = { "<cmd>Telekasten follow_link<cr>", desc = ":tk Follow link" },
     ["<leader>zw"] = { ":set wrap linebreak<cr>", desc = "Fix soft wrap" },
-    ["<leader>zp"] = { fix_style_tk, desc = ":tk Prettify format" },
     -- ["<leader>"] = { name = "Other utils" },
   },
   v = {

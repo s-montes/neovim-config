@@ -1,3 +1,14 @@
+local fix_style_tk = function()
+  -- See https://github.com/catppuccin/nvim/tree/main/lua/catppuccin/palettes
+  vim.api.nvim_set_hl(0, "tkTag", { bold = true, fg = "#94E2D5" })
+  vim.api.nvim_set_hl(0, "tkHighlight", { bold = true, fg = "#EBA0AC" })
+  vim.api.nvim_set_hl(0, "tkLink", { underline = true, bold = true, fg = "#FAB387" })
+  vim.api.nvim_set_hl(0, "tkAliasedLink", { underline = true, bold = true, fg = "#B4BEFE" })
+  vim.api.nvim_set_hl(0, "tkHighlightedAliasedLink", { underline = true, bold = true, fg = "#EBA0AC" })
+  vim.api.nvim_set_hl(0, "tkLinkAlias", { underline = true, bold = true, fg = "#B4BEFE" })
+  vim.api.nvim_set_hl(0, "tkLinkBody", { underline = true, bold = true, fg = "#FAB387" })
+end
+
 return {
   {
     "renerocksai/calendar-vim",
@@ -6,6 +17,7 @@ return {
     "renerocksai/telekasten.nvim",
     cmd = "Telekasten",
     dependencies = { "renerocksai/calendar-vim" },
+    init = fix_style_tk,
     keys = {
       ["<leader>zz"] = { "<cmd>Telekasten panel<cr>", desc = ":tk Toggle panel" },
       ["<leader>zf"] = { "<cmd>Telekasten find_notes<cr>", desc = ":tk Find notes" },
