@@ -13,8 +13,8 @@ return {
       -- null_ls.builtins.diagnostics.ruff,
       null_ls.builtins.formatting.stylua,
       null_ls.builtins.formatting.jq,
-      null_ls.builtins.diagnostics.markdownlint.with { filetypes = { "markdown", "telekasten" } },
-      null_ls.builtins.formatting.markdownlint.with { filetypes = { "markdown", "telekasten" } },
+      null_ls.builtins.diagnostics.markdownlint.with { filetypes = { "telekasten" } },
+      null_ls.builtins.formatting.markdownlint.with { filetypes = { "telekasten" } },
     }
     config.debug = true
     return config
