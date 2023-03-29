@@ -18,6 +18,9 @@ return {
       desc = "ToggleTerm ipython",
     },
     -- Testing
+    ["<leader>df"] = { '<cmd>lua require("neotest").run.run()<cr>', desc = "Run nearest test" },
+    ["<leader>dF"] = { '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>', desc = "Run current test file" },
+    ["<leader>dS"] = { '<cmd>lua require("neotest").run.stop()<cr>', desc = "Stop nearest test" },
     ["<leader>dt"] = { '<cmd>lua require("neotest").summary.toggle()<cr>', desc = "Toggle test summary" },
     ["<leader>dd"] = { '<cmd>lua require("neotest").run.run({strategy = "dap"})<cr>', desc = "Debug test" },
     ["<leader>ds"] = { '<cmd>lua require("neotest").output_panel.open()<cr>', desc = "Toggle test output panel" },

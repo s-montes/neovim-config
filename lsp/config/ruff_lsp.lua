@@ -17,6 +17,8 @@ return {
         "PD",
         "--ignore",
         "E501",
+        "--ignore",
+        "PD901",
       },
     },
   },
