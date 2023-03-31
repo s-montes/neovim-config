@@ -10,8 +10,8 @@ return {
     opts = {
       ensure_installed = {
         "ruff_lsp",
-        -- "pylsp",
-        "pyright",
+        "pylsp",
+        -- "pyright",
         "lua_ls",
       },
     },
@@ -66,18 +66,23 @@ return {
   },
   {
     "folke/todo-comments.nvim",
+    cmd = "TodoTelescope",
     dependencies = { "nvim-lua/plenary.nvim" },
     ft = { "python", "markdown", "telekasten" },
     config = function()
       require("todo-comments").setup {
         keywords = {
-          HIGH_P = { color = "#FF3264" },
-          MID_P = { color = "#FBBF24" },
-          LOW_P = { color = "#00BEDE" },
+          NOTE = { icon = " ", color = "hint", alt = {} },
+          HIGH_P = { icon = "", color = "#FF3264" },
+          MID_P = { icon = "", color = "#FBBF24" },
+          LOW_P = { icon = "", color = "#00BEDE" },
         },
         highlight = {
-          pattern = [[.*:?<(KEYWORDS)\s*:]],
+          pattern = [[.*:?<(KEYWORDS)\s*:?]],
           comments_only = false,
+        },
+        search = {
+          pattern = [[\b(KEYWORDS)\b]],
         },
       }
     end,

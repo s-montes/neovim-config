@@ -17,6 +17,8 @@ return {
       function() require("astronvim.utils").toggle_term_cmd "ipython" end,
       desc = "ToggleTerm ipython",
     },
+    -- todo-comments
+    ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODO elements" },
     -- Testing
     ["<leader>df"] = { '<cmd>lua require("neotest").run.run()<cr>', desc = "Run nearest test" },
     ["<leader>dF"] = { '<cmd>lua require("neotest").run.run(vim.fn.expand("%"))<cr>', desc = "Run current test file" },

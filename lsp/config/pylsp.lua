@@ -22,13 +22,16 @@ return {
           enabled = false,
         },
         black = {
-          enabled = true,
+          enabled = false,
         },
         ruff = {
           enabled = false,
         },
         pycodestyle = {
           enabled = false,
+        },
+        mypy = {
+          enable = true,
         },
       },
     },
