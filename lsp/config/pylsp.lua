@@ -30,9 +30,6 @@ return {
         pycodestyle = {
           enabled = false,
         },
-        mypy = {
-          enable = true,
-        },
       },
     },
   },
