@@ -26,13 +26,15 @@ return {
       local pwd = vim.fn.getcwd()
       local home = os.getenv "HOME" .. "/"
       pwd = pwd:gsub(home, "")
+      -- https://github.com/MaximilianLloyd/ascii.nvim
       dashboard.section.header.val = {
-        "    ███    ██ ███████ ███████ ██    ██ ██ ███    ███",
-        "    ████   ██ ██      ██   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ███████ ██   ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██ ██      ██   ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████ ███████ ███████   ████   ██ ██      ██",
-        "",
+        [[                                                    ]],
+        [[ ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ]],
+        [[ ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ]],
+        [[ ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ]],
+        [[ ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ]],
+        [[ ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ]],
+        [[ ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ]],
         "",
         string.format("    %s", pwd),
       }
@@ -41,8 +43,6 @@ return {
         button("LDR n", "  New File  "),
         button("LDR f f", "  Find File  "),
         button("LDR f o", "  Recents  "),
-        button("LDR f w", "  Find Word  "),
-        button("LDR f '", "  Bookmarks  "),
         button("LDR S f", "  Find Session  "),
       }
       return dashboard
