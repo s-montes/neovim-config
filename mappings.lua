@@ -12,10 +12,14 @@ return {
     ["<leader>y"] = { '"+y', desc = "Yank to clipboard" },
     ["<leader>P"] = { '"+p', desc = "Paste from clipboard" },
     ["<C-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle term" },
-    -- ipython
+    -- ToggleTerm
     ["<leader>tp"] = {
       function() require("astronvim.utils").toggle_term_cmd "ipython" end,
       desc = "ToggleTerm ipython",
+    },
+    ["<leader>tr"] = {
+      function() require("astronvim.utils").toggle_term_cmd("rich --pager " .. vim.api.nvim_buf_get_name(0)) end,
+      desc = "ToggleTerm rich",
     },
     -- todo-comments
     ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODO elements" },
