@@ -87,4 +87,10 @@ return {
       }
     end,
   },
+  {
+    "stevearc/aerial.nvim",
+    opts = {
+      backends = { "treesitter", "lsp", "markdown", "man" },
+    },
+  },
 }
