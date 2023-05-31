@@ -20,6 +20,19 @@ return {
     "EdenEast/nightfox.nvim",
   },
   {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        path_display = { shorten = { len = 2, exclude = { 1, -1 } } },
+        layout_config = {
+          horizontal = {
+            preview_width = 0.6,
+          },
+        },
+      },
+    },
+  },
+  {
     "goolord/alpha-nvim",
     opts = function()
       local dashboard = require "alpha.themes.dashboard"
