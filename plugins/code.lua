@@ -73,12 +73,12 @@ return {
       require("todo-comments").setup {
         keywords = {
           NOTE = { icon = " ", color = "hint", alt = {} },
-          HIGH_P = { icon = "", color = "#FF3264" },
-          MID_P = { icon = "", color = "#FBBF24" },
-          LOW_P = { icon = "", color = "#00BEDE" },
+          HIGH_P = { icon = " ", color = "#FF3264" },
+          MID_P = { icon = " ", color = "#FBBF24" },
+          LOW_P = { icon = " ", color = "#00BEDE" },
         },
         highlight = {
-          pattern = [[.*:?<(KEYWORDS)\s*:?]],
+          pattern = [[.*[^.]:?<(KEYWORDS)\s*:?]],
           comments_only = false,
         },
         search = {

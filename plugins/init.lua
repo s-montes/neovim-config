@@ -33,7 +33,8 @@ return {
       local notes_workspace = vim.fn.expand(os.getenv "LOCAL_NOTES_PATH")
       require("telekasten").setup {
         home = notes_workspace,
-        uuid = "rand",
+        dailies = notes_workspace .. "daily",
+        uuid_type = "rand",
         template_new_daily = notes_workspace .. "templates/daily.md",
         template_new_note = notes_workspace .. "templates/new_note.md",
       }
