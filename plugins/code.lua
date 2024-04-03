@@ -11,6 +11,7 @@ return {
       ensure_installed = {
         "ruff_lsp",
         "pylsp",
+        "gopls",
         -- "pyright",
         "lua_ls",
       },

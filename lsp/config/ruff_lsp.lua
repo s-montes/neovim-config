@@ -41,6 +41,8 @@ return {
         "B006",
         "--ignore",
         "PD901",
+        "--ignore",
+        "PD010",
       },
     },
   },

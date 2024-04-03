@@ -23,7 +23,7 @@ return {
     "nvim-telescope/telescope.nvim",
     opts = {
       defaults = {
-        path_display = { shorten = { len = 2, exclude = { 1, -1 } } },
+        path_display = { shorten = { len = 3, exclude = { 1, -1 } } },
         layout_config = {
           horizontal = {
             preview_width = 0.6,

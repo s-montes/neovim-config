@@ -8,6 +8,7 @@ return {
     allow_filetypes = {
       "lua",
       "python",
+      "go",
     },
   },
 }
