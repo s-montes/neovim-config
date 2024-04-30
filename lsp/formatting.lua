@@ -9,6 +9,7 @@ return {
       "lua",
       "python",
       "go",
+      "json",
     },
   },
 }
