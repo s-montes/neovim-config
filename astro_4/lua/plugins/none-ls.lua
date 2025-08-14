@@ -18,8 +18,14 @@ return {
       null_ls.builtins.formatting.gofmt,
       null_ls.builtins.formatting.goimports_reviser,
       null_ls.builtins.formatting.stylua,
-      null_ls.builtins.diagnostics.markdownlint.with { filetypes = { "telekasten" } },
-      null_ls.builtins.formatting.markdownlint.with { filetypes = { "telekasten" } },
+      null_ls.builtins.diagnostics.markdownlint.with {
+        extra_filetypes = { "telekasten" },
+        extra_args = { "--disable", "MD013", "--" },
+      },
+      null_ls.builtins.formatting.markdownlint.with {
+        extra_filetypes = { "telekasten" },
+        extra_args = { "--disable", "MD013", "--" },
+      },
     }
     return config -- return final config table
   end,
