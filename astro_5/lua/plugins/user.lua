@@ -72,19 +72,6 @@ return {
     },
   },
   {
-    "nvim-neotest/neotest",
-    dependencies = { "nvim-neotest/neotest-python" },
-    config = function()
-      require("neotest").setup {
-        adapters = {
-          require "neotest-python" {
-            dap = { justMyCode = false },
-          },
-        },
-      }
-    end,
-  },
-  {
     "kylechui/nvim-surround",
     lazy = false,
     version = "*",
@@ -137,12 +124,9 @@ return {
     end,
   },
   {
-    "renerocksai/calendar-vim",
-  },
-  {
-    "renerocksai/telekasten.nvim",
+    "nvim-telekasten/telekasten.nvim",
     cmd = "Telekasten",
-    dependencies = { "renerocksai/calendar-vim" },
+    dependencies = { "nvim-telekasten/calendar-vim", "nvim-telescope/telescope.nvim" },
     init = fix_style_tk,
     keys = {
       ["<leader>zz"] = { "<cmd>Telekasten panel<cr>", desc = ":tk Toggle panel" },
