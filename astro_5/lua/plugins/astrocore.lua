@@ -22,19 +22,6 @@ return {
       virtual_text = true,
       underline = true,
     },
-    -- passed to `vim.filetype.add`
-    filetypes = {
-      -- see `:h vim.filetype.add` for usage
-      extension = {
-        foo = "fooscript",
-      },
-      filename = {
-        [".foorc"] = "fooscript",
-      },
-      pattern = {
-        [".*/etc/foo/.*"] = "fooscript",
-      },
-    },
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
@@ -75,7 +62,7 @@ return {
         ["<C-`>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle term" },
         -- ToggleTerm
         ["<leader>tp"] = {
-          function() require("astronvim.utils").toggle_term_cmd "ipython" end,
+          function() require("astrocore").toggle_term_cmd "ipython" end,
           desc = "ToggleTerm ipython",
         },
         -- Testing
@@ -96,25 +83,8 @@ return {
           silent = true,
           desc = "Generate docstring",
         },
-        -- Telekasten
-        ["<leader>z"] = { name = "Telekasten" },
-        ["<leader>zz"] = { "<cmd>Telekasten panel<cr>", desc = ":tk Toggle panel" },
-        ["<leader>zf"] = { "<cmd>Telekasten find_notes<cr>", desc = ":tk Find notes" },
-        ["<leader>zs"] = { "<cmd>Telekasten search_notes<cr>", desc = ":tk Search notes" },
-        ["<leader>zt"] = { "<cmd>Telekasten goto_today<cr>", desc = ":tk Open today's note" },
-        ["<leader>zn"] = { "<cmd>Telekasten new_note<cr>", desc = ":tk Create new note" },
-        ["<leader>zc"] = { "<cmd>Telekasten show_calendar<cr>", desc = ":tk Open calendar" },
-        ["<leader>zi"] = { "<cmd>Telekasten insert_link<cr>", desc = ":tk Insert link" },
-        ["<leader>z["] = { "<cmd>Telekasten toggle_todo<cr>", desc = ":tk Toggle TODO" },
-        ["<leader>z<cr>"] = { "<cmd>Telekasten follow_link<cr>", desc = ":tk Follow link" },
+        ["<leader>z"] = { desc = "Telekasten" },
         ["<leader>zw"] = { ":set wrap linebreak<cr>", desc = "Fix soft wrap" },
-
-        -- tables with just a `desc` key will be registered with which-key if it's installed
-        -- this is useful for naming menus
-        -- ["<Leader>b"] = { desc = "Buffers" },
-
-        -- setting a mapping to false will disable it
-        -- ["<C-S>"] = false,
       },
     },
   },

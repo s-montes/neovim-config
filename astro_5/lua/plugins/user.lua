@@ -14,10 +14,6 @@ local fix_style_tk = function()
 end
 ---@type LazySpec
 return {
-
-  -- == Examples of Adding Plugins ==
-
-  "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
@@ -95,49 +91,20 @@ return {
     version = "*",
   },
   {
-    "windwp/nvim-autopairs",
-    config = function(plugin, opts)
-      require "astronvim.plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call
-      -- add more custom autopairs configuration such as custom rules
-      local npairs = require "nvim-autopairs"
-      local Rule = require "nvim-autopairs.rule"
-      local cond = require "nvim-autopairs.conds"
-      npairs.add_rules(
-        {
-          Rule("$", "$", { "tex", "latex" })
-            -- don't add a pair if the next character is %
-            :with_pair(cond.not_after_regex "%%")
-            -- don't add a pair if  the previous character is xxx
-            :with_pair(
-              cond.not_before_regex("xxx", 3)
-            )
-            -- don't move right when repeat character
-            :with_move(cond.none())
-            -- don't delete if the next character is xx
-            :with_del(cond.not_after_regex "xx")
-            -- disable adding a newline when you press <cr>
-            :with_cr(cond.none()),
-        },
-        -- disable for .vim files, but it work for another filetypes
-        Rule("a", "a", "-vim")
-      )
-    end,
-  },
-  {
     "nvim-telekasten/telekasten.nvim",
     cmd = "Telekasten",
     dependencies = { "nvim-telekasten/calendar-vim", "nvim-telescope/telescope.nvim" },
     init = fix_style_tk,
     keys = {
-      ["<leader>zz"] = { "<cmd>Telekasten panel<cr>", desc = ":tk Toggle panel" },
-      ["<leader>zf"] = { "<cmd>Telekasten find_notes<cr>", desc = ":tk Find notes" },
-      ["<leader>zs"] = { "<cmd>Telekasten search_notes<cr>", desc = ":tk Search notes" },
-      ["<leader>zt"] = { "<cmd>Telekasten goto_today<cr>", desc = ":tk Open today's note" },
-      ["<leader>zn"] = { "<cmd>Telekasten new_note<cr>", desc = ":tk Create new note" },
-      ["<leader>zc"] = { "<cmd>Telekasten show_calendar<cr>", desc = ":tk Open calendar" },
-      ["<leader>zi"] = { "<cmd>Telekasten insert_link<cr>", desc = ":tk Insert link" },
-      ["<leader>z["] = { "<cmd>Telekasten toggle_todo<cr>", desc = ":tk Toggle TODO" },
-      ["<leader>z<cr>"] = { "<cmd>Telekasten follow_link<cr>", desc = ":tk Follow link" },
+      { "<leader>zz", "<cmd>Telekasten panel<cr>", desc = ":tk Toggle panel" },
+      { "<leader>zf", "<cmd>Telekasten find_notes<cr>", desc = ":tk Find notes" },
+      { "<leader>zs", "<cmd>Telekasten search_notes<cr>", desc = ":tk Search notes" },
+      { "<leader>zt", "<cmd>Telekasten goto_today<cr>", desc = ":tk Open today's note" },
+      { "<leader>zn", "<cmd>Telekasten new_note<cr>", desc = ":tk Create new note" },
+      { "<leader>zc", "<cmd>Telekasten show_calendar<cr>", desc = ":tk Open calendar" },
+      { "<leader>zi", "<cmd>Telekasten insert_link<cr>", desc = ":tk Insert link" },
+      { "<leader>z[", "<cmd>Telekasten toggle_todo<cr>", desc = ":tk Toggle TODO" },
+      { "<leader>z<cr>", "<cmd>Telekasten follow_link<cr>", desc = ":tk Follow link" },
     },
     config = function()
       local notes_workspace = vim.fn.expand(os.getenv "LOCAL_NOTES_PATH")

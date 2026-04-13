@@ -253,7 +253,7 @@ return {
     on_attach = function(client, _)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
-      if client.name == "ruff_lsp" then client.server_capabilities.hoverProvider = false end
+      if client.name == "ruff" then client.server_capabilities.hoverProvider = false end
     end,
   },
 }

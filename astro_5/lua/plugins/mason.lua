@@ -12,6 +12,7 @@ return {
         -- install language servers
         "lua-language-server",
         "python-lsp-server",
+        "pyright",
         "gopls",
 
         -- install formatters
